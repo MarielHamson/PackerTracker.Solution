@@ -35,5 +35,15 @@ namespace PackerTracker.Tests
       Thing newThing = new Thing("Backpack", 5, true, 10);
       Assert.AreEqual(newThing.Id, 1);
     }
+
+    [TestMethod]
+    public void TotalWeight_AddsTotalWeightOfAllThingsInInstances_Instances()
+
+    {
+      Thing newThing1 = new Thing("Backpack", 5, true, 10);
+      Thing newThing2 = new Thing("Shovel", 5, true, 20);
+      Thing newThing3 = new Thing("Food", 5, true, 30);
+      Assert.AreEqual(Thing.TotalWeight(), 60);
+    }
   }
 }
