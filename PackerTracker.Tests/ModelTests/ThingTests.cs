@@ -21,7 +21,7 @@ namespace PackerTracker.Tests
     public void ThingConstructor_CreatesInstanceOfItemWithName_Item()
     {
       Thing newThing = new Thing("Backpack", 5, true, 10);
-      Assert.AreEqual(newThing.Name, "incorrect name");
+      Assert.AreEqual(newThing.Name, "Backpack");
     }
   }
 }
