@@ -1,0 +1,17 @@
+@using PackerTracker.Models;
+
+<h1>Packer Tracker for Trail Blazers</h1>
+
+@if (Model.Count == 0)
+{
+  <p>There are no gear things in the list. Get on it and get some gear.</p>
+}
+<ul>
+  @foreach (Thing thing in Model)
+  {
+    <li><a href='/things/@thing.Id'>@thing.Name</a></li>
+  }
+</ul>
+
+<a href="/things/new">Add new gear.</a>
+<a href="/things/show">Show new gear.</a>

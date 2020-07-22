@@ -28,6 +28,11 @@ namespace PackerTracker.Models
       _instances.Clear();
     }
 
+    public static List<Thing> GetAll()
+    {
+      return _instances;
+    }
+
     public static int TotalWeight()
     {
       int allWeight = 0;
@@ -36,6 +41,10 @@ namespace PackerTracker.Models
         allWeight += _instances[i].Weight;
       }
       return allWeight;
+    }
+    public static Thing Find(int searchId)
+    {
+      return _instances[searchId - 1];
     }
   }
 }
